@@ -1,0 +1,83 @@
+Category,Symptom
+General,Fever
+General,Fatigue
+General,Chills
+General,Weakness
+General,Night Sweats
+General,Weight Loss
+General,Loss of Appetite
+General,Swollen Lymph Nodes
+Respiratory,Cough
+Respiratory,Shortness of Breath
+Respiratory,Wheezing
+Respiratory,Chest Pain
+Respiratory,Sore Throat
+Respiratory,Runny Nose
+Respiratory,Sneezing
+Respiratory,Hoarseness
+Respiratory,Nasal Congestion
+Gastrointestinal,Nausea
+Gastrointestinal,Vomiting
+Gastrointestinal,Diarrhea
+Gastrointestinal,Abdominal Pain
+Gastrointestinal,Constipation
+Gastrointestinal,Bloating
+Gastrointestinal,Indigestion
+Gastrointestinal,Acid Reflux
+Gastrointestinal,Blood in Stool
+Neurological,Headache
+Neurological,Dizziness
+Neurological,Confusion
+Neurological,Memory Loss
+Neurological,Seizures
+Neurological,Tremors
+Neurological,Numbness
+Neurological,Tingling Sensation
+Neurological,Speech Difficulty
+Neurological,Muscle Weakness
+Skin & Hair,Rash
+Skin & Hair,Itching
+Skin & Hair,Redness
+Skin & Hair,Blisters
+Skin & Hair,Pale Skin
+Skin & Hair,Hair Loss
+Skin & Hair,Excessive Sweating
+Skin & Hair,Bruising Easily
+Skin & Hair,Dry Skin
+Skin & Hair,Yellowing of Skin (Jaundice)
+Urinary & Renal,Frequent Urination
+Urinary & Renal,Painful Urination
+Urinary & Renal,Dark Urine
+Urinary & Renal,Blood in Urine
+Urinary & Renal,Cloudy Urine
+Urinary & Renal,Kidney Pain
+Cardiovascular,High Blood Pressure
+Cardiovascular,Low Blood Pressure
+Cardiovascular,Chest Tightness
+Cardiovascular,Irregular Heartbeat
+Cardiovascular,Swollen Legs
+Cardiovascular,Dizziness upon Standing
+Cardiovascular,Cold Hands & Feet
+Endocrine & Metabolic,Increased Thirst
+Endocrine & Metabolic,Frequent Hunger
+Endocrine & Metabolic,Cold Intolerance
+Endocrine & Metabolic,Heat Intolerance
+Endocrine & Metabolic,Excessive Sweating
+Endocrine & Metabolic,Slow Healing Wounds
+Musculoskeletal,Joint Pain
+Musculoskeletal,Muscle Pain
+Musculoskeletal,Stiffness
+Musculoskeletal,Bone Fractures
+Musculoskeletal,Back Pain
+Musculoskeletal,Limited Range of Motion
+"Eye, Ear & Throat",Blurred Vision
+"Eye, Ear & Throat",Red Eyes
+"Eye, Ear & Throat",Sensitivity to Light
+"Eye, Ear & Throat",Ringing in Ears
+"Eye, Ear & Throat",Ear Pain
+"Eye, Ear & Throat",Hearing Loss
+Psychological,Depression
+Psychological,Anxiety
+Psychological,Mood Swings
+Psychological,Hallucinations
+Psychological,Insomnia

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SympTrack AI - Symptom Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-heartbeat logo-icon"></i>
+            <span class="custom-gradient-heading"><h2 style="font-size: 20px;">SympTrack AI</h2></span>
+        </div>
+        <div class="header-actions">
+            <!-- <div id="g_id_onload"
+                data-client_id="YOUR_CLIENT_ID.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleGoogleSignIn"
+                data-auto_prompt="false">
+            </div> -->
+
+            <!-- <div class="g_id_signin"
+                data-type="standard"
+                data-shape="pill"
+                data-theme="filled_blue"
+                data-text="signin_with"
+                data-size="medium"
+                data-logo_alignment="left">
+            </div> -->
+
+            <div class="health-status">
+                <i class="fas fa-smile"></i>
+                <span>Good Health</span>
+            </div>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="chat-container">
+        <div class="messages">
+            <div class="message ai-message ai-msg">
+                <!-- <div class="avatar">
+                    <i class="fas fa-robot"></i>
+                </div> -->
+                <div class="content">
+                    <p>Hello! I'm <b class="custom-gradient-heading">SympTrack AI</b> ,
+                        <!-- your personal symptom tracker. -->
+                    </p>
+                    <p>Your AI-powered assistant for smarter health tracking.
+                        <!-- them and identify patterns. -->
+
+                    </p>
+                    <div class="quick-actions">
+                        <div class="quick-action">
+                            <i class="fas fa-head-side-cough"></i> Report a new symptom
+                        </div>
+                        <div class="quick-action">
+                            <i class="fas fa-chart-line"></i> View my health trends
+                        </div>
+                        <div class="quick-action">
+                            <i class="fas fa-pills"></i> Log medication
+                        </div>
+                        <div class="quick-action">
+                            <i class="fas fa-moon"></i> Monitor sleep patterns
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="message user-message">
+                <div class="avatar user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="content">
+                    I've had a headache and mild fever since yesterday
+                </div>
+            </div> -->
+
+            <div class="message ai-message">
+                <!-- <div class="avatar">
+                    <i class="fas fa-robot"></i>
+                </div> -->
+                <div class="content">
+                    <!-- <div class="resp">Ok</div>
+                    <p>I've logged these symptoms:</p>
+                    <div>
+                        <span class="symptom-tag">Headache</span>
+                        <span class="symptom-tag">Fever (mild)</span>
+                    </div>
+                    <div class="severity-indicator severity-medium">
+                        <i class="fas fa-exclamation-circle"></i>
+                        Medium severity - monitor for changes
+                    </div>
+                    <div class="health-metric">
+                        <i class="fas fa-thermometer-half"></i>
+                        <span>Last recorded temperature: <span class="metric-value">37.8°C</span></span>
+                    </div>
+                    <div class="quick-actions" style="margin-top: 1rem;">
+                        <div class="quick-action">
+                            <i class="fas fa-plus-circle"></i> Add more details
+                        </div>
+                        <div class="quick-action">
+                            <i class="fas fa-clock"></i> Set a reminder to check
+                        </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typing-indicator" style="display: none;">
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+            <span>SympTrack AI is analyzing...</span>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <div class="input-box">
+            <textarea id="user-input" placeholder="Describe your symptoms or ask a health question..."
+                rows="1"></textarea>
+            <button class="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+
+        </div>
+        <p class="statdes">SympTrack AI can make mistakes. Check important info.</p>
+        <p class="statdes"> I’m not a doctor. Always verify with a professional for serious concerns.</p>
+    </div>
+    </div>
+    <script src="../static/script.js"></script>
+    <!-- <script src="../static/side.js"></script> -->
+
+    <script>
+        // Global variable to store available symptoms
+        window.availableSymptoms = [];
+    </script>
+</body>
+
+</html>
