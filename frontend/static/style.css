@@ -677,4 +677,8 @@ textarea:focus {
     .info-card p {
         font-size: 0.85rem;
     }
+    
+    .quick-action{
+        display: none;
+    }
 }
