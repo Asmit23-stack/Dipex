@@ -60,14 +60,14 @@ function initThemeToggle() {
     icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   }
   
-  // Call this in your DOMContentLoaded event
+  
   document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
-    // ... your other initialization code
+    
   });
 
 
-// Show welcome message with quick actions
+
 function showWelcomeMessage() {
     const welcomeMsg = `
         <div class="message ai-message ai-msg">
@@ -93,7 +93,7 @@ function showWelcomeMessage() {
     `;
     messagesDiv.innerHTML = welcomeMsg;
     
-    // Add click handlers for quick actions
+    
     document.querySelectorAll('.quick-action').forEach(action => {
         action.addEventListener('click', function() {
             const symptom = this.getAttribute('data-symptom');
@@ -110,7 +110,7 @@ function handleQuickAction(action) {
             break;
         case 'chart':
             addMessage("Here are your health trends...", 'ai-message');
-            // Add chart visualization logic here
+            
             break;
         case 'medication':
             addMessage("What medication would you like to log?", 'ai-message');
@@ -130,7 +130,7 @@ async function handleUserInput() {
     userInput.value = '';
     
     showTypingIndicator();
-    updateHealthStatus('analyzing'); // Show analyzing status
+    updateHealthStatus('analyzing'); 
     
     try {
         const response = await fetch('/api/predict', {
@@ -142,7 +142,7 @@ async function handleUserInput() {
         const result = await response.json();
         displayPrediction(result);
         
-        // Update health status based on prediction
+        
         if (result.disease) {
             const severity = result.confidence > 0.7 ? 'serious' : 
                            result.confidence > 0.4 ? 'mild' : 'good';
@@ -181,13 +181,8 @@ function updateHealthStatus(status) {
     healthStatus.classList.add(statusInfo.color);
 }
 
-// Display prediction results with severity indicator
+// Modify the displayPrediction function to show disease info
 function displayPrediction(result) {
-    if (result.error) {
-        addMessage(`Error: ${result.error}`, 'ai-message error');
-        return;
-    }
-    
     const confidencePercent = Math.round(result.confidence * 100);
     const severity = confidencePercent > 70 ? 'high' : 
                    confidencePercent > 40 ? 'medium' : 'low';
@@ -198,23 +193,38 @@ function displayPrediction(result) {
     
     let html = `
         <div class="prediction-result">
-            <h3>${result.disease || 'Unknown condition'}</h3>
+            <h3>${result.disease}</h3>
             <div class="severity-indicator ${severityClass}">
                 <i class="fas fa-${severityIcon}"></i>
-                ${severity} severity - ${confidencePercent}% confidence
+                ${severity} severity (${confidencePercent}% confidence)
             </div>
-    `;
-    
-    if (result.symptoms_used) {
-        html += `<div class="symptoms-used">
-                <p>Based on:</p>
+            
+            <div class="disease-info-section">
+                <div class="info-card">
+                    <h4><i class="fas fa-info-circle"></i> Description</h4>
+                    <p>${result.description || 'No description available'}</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4><i class="fas fa-prescription-bottle-alt"></i> Treatment</h4>
+                    <p>${result.treatment || 'Consult a healthcare professional'}</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4><i class="fas fa-hands-helping"></i> Self Care</h4>
+                    <p>${result.self_care || 'Rest and monitor symptoms'}</p>
+                </div>
+            </div>
+            
+            <div class="symptoms-used">
+                <p>Recognized symptoms:</p>
                 <div class="symptom-tags">
                     ${result.symptoms_used.map(s => `<span class="symptom-tag">${s.replace(/_/g, ' ')}</span>`).join('')}
                 </div>
-            </div>`;
-    }
+            </div>
+        </div>
+    `;
     
-    html += `</div>`;
     addMessage(html, 'ai-message');
 }
 
@@ -264,6 +274,60 @@ function initSymptomSidebar() {
     });
 }
 
+function initMobileSidebar() {
+    const sidebar = document.createElement('div');
+    sidebar.className = 'symptom-sidebar';
+    sidebar.innerHTML = `
+        <div class="sidebar-header">
+            <h3>Select Symptoms</h3>
+            <input type="text" id="symptom-search" placeholder="Search symptoms..." class="search-input">
+        </div>
+        <div class="symptom-list-container">
+            <div class="symptom-list"></div>
+        </div>
+    `;
+    document.body.appendChild(sidebar);
+
+    const toggleBtn = document.createElement('div');
+    toggleBtn.className = 'toggle-sidebar';
+    toggleBtn.innerHTML = '<i class="fas fa-clipboard-list"></i>';
+    document.body.appendChild(toggleBtn);
+
+    // Mobile sidebar toggle
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
+    // Populate symptoms
+    const symptomList = sidebar.querySelector('.symptom-list');
+    availableSymptoms.forEach(symptom => {
+        const item = document.createElement('div');
+        item.className = 'symptom-item';
+        item.innerHTML = `
+            <i class="fas fa-plus-circle"></i>
+            <span>${symptom.replace(/_/g, ' ')}</span>
+        `;
+        item.addEventListener('click', () => {
+            const currentInput = userInput.value.trim();
+            userInput.value = currentInput ? 
+                `${currentInput}, ${symptom.replace(/_/g, ' ')}` : 
+                `I have ${symptom.replace(/_/g, ' ')}`;
+            userInput.focus();
+            sidebar.classList.remove('active');
+        });
+        symptomList.appendChild(item);
+    });
+
+    // Mobile search functionality
+    const searchInput = sidebar.querySelector('#symptom-search');
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        document.querySelectorAll('.symptom-item').forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(term) ? 'flex' : 'none';
+        });
+    });
+}
 // Helper functions
 function addMessage(content, className) {
     const messageDiv = document.createElement('div');
