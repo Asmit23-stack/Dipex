@@ -400,12 +400,12 @@ textarea:focus {
     padding: 20px;
     overflow-y: auto;
     z-index: 1000;
-    transform: translateX(0);
+    transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
 
 .symptom-sidebar.active {
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
 .sidebar-header {
@@ -466,6 +466,7 @@ textarea:focus {
 
 /* Footer */
 .statdes {
+    padding: 0 5rem;
     font-size: 12px;
     font-weight: 400;
     text-align: center;
@@ -526,8 +527,154 @@ textarea:focus {
     margin-left: 280px;
 }
 
+/* Mobile-specific styles (under 768px) */
 @media (max-width: 768px) {
-    .symptom-sidebar.active ~ .chat-container {
-        margin-left: 85%;
+    /* Header adjustments */
+    header {
+        padding: 0.75rem;
+        flex-wrap: wrap;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    /* Chat message sizing */
+    .messages {
+        padding: 0.75rem;
+    }
+    
+    .ai-msg {
+        max-width: 90%;
+    }
+    
+    .ai-msg p {
+        font-size: 1.1rem;
+    }
+    
+    /* Input area improvements */
+    .input-container {
+        padding: 0.75rem;
+    }
+    
+    textarea {
+        min-height: 50px;
+        padding: 0.75rem 3rem 0.75rem 0.75rem;
+    }
+    
+    .send-button {
+        width: 32px;
+        height: 32px;
+        bottom: 0.75rem;
+        right: 0.75rem;
+    }
+    
+    /* Sidebar mobile behavior */
+    .symptom-sidebar {
+        width: 85%;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+    
+    .symptom-sidebar.active {
+        transform: translateX(0);
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+    
+    /* Make toggle button more accessible */
+    .toggle-sidebar {
+        right: 15px;
+        bottom: 15%;
+        width: 35px;
+        height: 35px;
+        font-size: .8rem;
+        z-index: 1001;
+    }
+    
+    /* Quick actions single column */
+    .quick-actions {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .quick-action {
+        padding: 0.75rem;
+        justify-content: flex-start;
+    }
+    
+    /* Disease info cards mobile layout */
+    .disease-info-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-card {
+        padding: 0.75rem;
+    }
+    
+    .info-card h4 {
+        font-size: 0.9rem;
+    }
+    
+    .info-card p {
+        font-size: 0.85rem;
+    }
+    
+    /* Footer text adjustment */
+    .statdes {
+        padding: 0 0.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* Disease info cards */
+.disease-info-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.info-card {
+    background: var(--bg-secondary);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border-left: 4px solid var(--primary);
+}
+
+.info-card h4 {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+}
+
+.info-card i {
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .disease-info-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card {
+        padding: 0.75rem;
+    }
+    
+    .info-card h4 {
+        font-size: 0.9rem;
+    }
+    
+    .info-card p {
+        font-size: 0.85rem;
     }
 }
