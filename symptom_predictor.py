@@ -3,12 +3,29 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import accuracy_score
+import json
+import os
+
+# O(1) symptom lookup using dictionary for optimized performance
+class SymptomLookup:
+    def __init__(self, symptoms):
+        self.symptom_to_index = {symptom.lower(): idx for idx, symptom in enumerate(symptoms)}
+        self.index_to_symptom = {idx: symptom for idx, symptom in enumerate(symptoms)}
+    
+    def get_index(self, symptom):
+        """O(1) lookup for symptom index"""
+        return self.symptom_to_index.get(symptom.lower(), -1)
+    
+    def get_symptom(self, index):
+        """O(1) lookup for symptom by index"""
+        return self.index_to_symptom.get(index, None)
 
 class SymptomPredictor:
     def __init__(self, dataset_path):
         self.model = None
         self.all_symptoms = []
         self.diseases = []
+        self.symptom_lookup = None  # O(1) lookup structure
         self.load_and_train(dataset_path)
     
     def load_and_train(self, dataset_path):
@@ -17,6 +34,9 @@ class SymptomPredictor:
             train_df = pd.read_csv(dataset_path).iloc[:, :-1]
             self.all_symptoms = train_df.columns[:-1].tolist()
             self.diseases = train_df['prognosis'].unique().tolist()
+            
+            # Initialize O(1) symptom lookup
+            self.symptom_lookup = SymptomLookup(self.all_symptoms)
             
             X = train_df.iloc[:, :-1]
             y = train_df["prognosis"]

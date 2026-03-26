@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SympTrack favicon">
+  <defs>
+    <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff2f7f"/>
+      <stop offset="100%" stop-color="#5f47c2"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f6a338"/>
+      <stop offset="100%" stop-color="#8e3ab8"/>
+    </linearGradient>
+  </defs>
+
+  <path fill="url(#heartGrad)" d="M32 58 10 37C3 30 3 19 10 12c6-6 16-6 22 1 6-7 16-7 22-1 7 7 7 18 0 25L32 58z"/>
+
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 31h14" stroke-width="2.6"/>
+    <path d="M24 40h12" stroke-width="2.6"/>
+    <path d="M36 31v-8l4-4h10" stroke-width="2.6"/>
+    <path d="M36 40v5h8" stroke-width="2.6"/>
+  </g>
+
+  <g fill="none" stroke="url(#nodeGrad)" stroke-width="2.6">
+    <circle cx="21" cy="31" r="2.4"/>
+    <circle cx="21" cy="40" r="2.4"/>
+    <circle cx="52" cy="19" r="2.8"/>
+    <circle cx="46" cy="45" r="2.8"/>
+  </g>
+</svg>

@@ -1,83 +1,132 @@
-Category,Symptom
-General,Fever
-General,Fatigue
-General,Chills
-General,Weakness
-General,Night Sweats
-General,Weight Loss
-General,Loss of Appetite
-General,Swollen Lymph Nodes
-Respiratory,Cough
-Respiratory,Shortness of Breath
-Respiratory,Wheezing
-Respiratory,Chest Pain
-Respiratory,Sore Throat
-Respiratory,Runny Nose
-Respiratory,Sneezing
-Respiratory,Hoarseness
-Respiratory,Nasal Congestion
-Gastrointestinal,Nausea
-Gastrointestinal,Vomiting
-Gastrointestinal,Diarrhea
-Gastrointestinal,Abdominal Pain
-Gastrointestinal,Constipation
-Gastrointestinal,Bloating
-Gastrointestinal,Indigestion
-Gastrointestinal,Acid Reflux
-Gastrointestinal,Blood in Stool
-Neurological,Headache
-Neurological,Dizziness
-Neurological,Confusion
-Neurological,Memory Loss
-Neurological,Seizures
-Neurological,Tremors
-Neurological,Numbness
-Neurological,Tingling Sensation
-Neurological,Speech Difficulty
-Neurological,Muscle Weakness
-Skin & Hair,Rash
-Skin & Hair,Itching
-Skin & Hair,Redness
-Skin & Hair,Blisters
-Skin & Hair,Pale Skin
-Skin & Hair,Hair Loss
-Skin & Hair,Excessive Sweating
-Skin & Hair,Bruising Easily
-Skin & Hair,Dry Skin
-Skin & Hair,Yellowing of Skin (Jaundice)
-Urinary & Renal,Frequent Urination
-Urinary & Renal,Painful Urination
-Urinary & Renal,Dark Urine
-Urinary & Renal,Blood in Urine
-Urinary & Renal,Cloudy Urine
-Urinary & Renal,Kidney Pain
-Cardiovascular,High Blood Pressure
-Cardiovascular,Low Blood Pressure
-Cardiovascular,Chest Tightness
-Cardiovascular,Irregular Heartbeat
-Cardiovascular,Swollen Legs
-Cardiovascular,Dizziness upon Standing
-Cardiovascular,Cold Hands & Feet
-Endocrine & Metabolic,Increased Thirst
-Endocrine & Metabolic,Frequent Hunger
-Endocrine & Metabolic,Cold Intolerance
-Endocrine & Metabolic,Heat Intolerance
-Endocrine & Metabolic,Excessive Sweating
-Endocrine & Metabolic,Slow Healing Wounds
-Musculoskeletal,Joint Pain
-Musculoskeletal,Muscle Pain
-Musculoskeletal,Stiffness
-Musculoskeletal,Bone Fractures
-Musculoskeletal,Back Pain
-Musculoskeletal,Limited Range of Motion
-"Eye, Ear & Throat",Blurred Vision
-"Eye, Ear & Throat",Red Eyes
-"Eye, Ear & Throat",Sensitivity to Light
-"Eye, Ear & Throat",Ringing in Ears
-"Eye, Ear & Throat",Ear Pain
-"Eye, Ear & Throat",Hearing Loss
-Psychological,Depression
-Psychological,Anxiety
-Psychological,Mood Swings
-Psychological,Hallucinations
-Psychological,Insomnia
+Category,Symptom,Display,Aliases
+Endocrine & Hormonal,abnormal_menstruation,Abnormal Menstruation,abnormal menstruation
+Endocrine & Hormonal,enlarged_thyroid,Enlarged Thyroid,enlarged thyroid
+Endocrine & Hormonal,excessive_hunger,Excessive Hunger,excessive hunger
+Endocrine & Hormonal,irregular_sugar_level,Irregular Sugar Level,irregular sugar level
+Endocrine & Hormonal,weight_gain,Weight Gain,weight gain
+Endocrine & Hormonal,weight_loss,Weight Loss,weight loss
+Gastrointestinal,abdominal_pain,Abdominal Pain,abdominal pain
+Gastrointestinal,bloody_stool,Bloody Stool,bloody stool
+Gastrointestinal,constipation,Constipation,constipation
+Gastrointestinal,diarrhea,Diarrhea,"diarrhea, diarrhoea, loose_motion, loose_stool, watery_stool"
+Gastrointestinal,increased_appetite,Increased Appetite,increased appetite
+Gastrointestinal,irritation_in_anus,Irritation In Anus,irritation in anus
+Gastrointestinal,loss_of_appetite,Loss Of Appetite,loss of appetite
+Gastrointestinal,nausea,Nausea,nausea
+Gastrointestinal,stomach_bleeding,Stomach Bleeding,stomach bleeding
+Gastrointestinal,stomach_pain,Stomach Pain,"abdominal_pain, stomach pain"
+Gastrointestinal,swelling_of_stomach,Swelling Of Stomach,swelling of stomach
+Gastrointestinal,vomiting,Vomiting,vomiting
+General,chills,Chills,chills
+General,dehydration,Dehydration,dehydration
+General,fatigue,Fatigue,fatigue
+General,high_fever,High Fever,"fever, high fever, very_high_fever"
+General,malaise,Malaise,malaise
+General,mild_fever,Mild Fever,mild fever
+General,sweating,Sweating,sweating
+General,swelled_lymph_nodes,Swelled Lymph Nodes,swelled lymph nodes
+Mental Health,anxiety,Anxiety,anxiety
+Mental Health,depression,Depression,depression
+Mental Health,irritability,Irritability,irritability
+Mental Health,mood_swings,Mood Swings,mood swings
+Mental Health,restlessness,Restlessness,restlessness
+Musculoskeletal,back_pain,Back Pain,back pain
+Musculoskeletal,hip_joint_pain,Hip Joint Pain,hip joint pain
+Musculoskeletal,joint_pain,Joint Pain,joint pain
+Musculoskeletal,knee_pain,Knee Pain,knee pain
+Musculoskeletal,movement_stiffness,Movement Stiffness,movement stiffness
+Musculoskeletal,muscle_pain,Muscle Pain,muscle pain
+Musculoskeletal,muscle_wasting,Muscle Wasting,muscle wasting
+Musculoskeletal,muscle_weakness,Muscle Weakness,muscle weakness
+Musculoskeletal,neck_pain,Neck Pain,neck pain
+Musculoskeletal,painful_walking,Painful Walking,painful walking
+Musculoskeletal,stiff_neck,Stiff Neck,stiff neck
+Musculoskeletal,swelling_joints,Swelling Joints,swelling joints
+Musculoskeletal,weakness_in_limbs,Weakness In Limbs,weakness in limbs
+Musculoskeletal,weakness_of_one_body_side,Weakness Of One Body Side,weakness of one body side
+Neurological,altered_sensorium,Altered Sensorium,altered sensorium
+Neurological,blackheads,Blackheads,blackheads
+Neurological,coma,Coma,coma
+Neurological,dizziness,Dizziness,dizziness
+Neurological,headache,Headache,headache
+Neurological,lack_of_concentration,Lack Of Concentration,lack of concentration
+Neurological,loss_of_balance,Loss Of Balance,loss of balance
+Neurological,slurred_speech,Slurred Speech,slurred speech
+Other,acidity,Acidity,acidity
+Other,acute_liver_failure,Acute Liver Failure,acute liver failure
+Other,belly_pain,Belly Pain,belly pain
+Other,blurred_and_distorted_vision,Blurred And Distorted Vision,blurred and distorted vision
+Other,bruising,Bruising,bruising
+Other,cold_hands_and_feets,Cold Hands And Feets,cold hands and feets
+Other,congestion,Congestion,congestion
+Other,continuous_sneezing,Continuous Sneezing,continuous sneezing
+Other,cramps,Cramps,cramps
+Other,dischromic_patches,Dischromic Patches,dischromic patches
+Other,distention_of_abdomen,Distention Of Abdomen,distention of abdomen
+Other,drying_and_tingling_lips,Drying And Tingling Lips,drying and tingling lips
+Other,extra_marital_contacts,Extra Marital Contacts,extra marital contacts
+Other,family_history,Family History,family history
+Other,fast_heart_rate,Fast Heart Rate,fast heart rate
+Other,fluid_overload,Fluid Overload,fluid overload
+Other,history_of_alcohol_consumption,History Of Alcohol Consumption,history of alcohol consumption
+Other,indigestion,Indigestion,indigestion
+Other,lethargy,Lethargy,lethargy
+Other,loss_of_smell,Loss Of Smell,loss of smell
+Other,obesity,Obesity,obesity
+Other,pain_behind_the_eyes,Pain Behind The Eyes,pain behind the eyes
+Other,pain_during_bowel_movements,Pain During Bowel Movements,pain during bowel movements
+Other,pain_in_anal_region,Pain In Anal Region,pain in anal region
+Other,palpitations,Palpitations,palpitations
+Other,passage_of_gases,Passage Of Gases,passage of gases
+Other,prominent_veins_on_calf,Prominent Veins On Calf,prominent veins on calf
+Other,puffy_face_and_eyes,Puffy Face And Eyes,puffy face and eyes
+Other,receiving_blood_transfusion,Receiving Blood Transfusion,receiving blood transfusion
+Other,receiving_unsterile_injections,Receiving Unsterile Injections,receiving unsterile injections
+Other,redness_of_eyes,Redness Of Eyes,redness of eyes
+Other,scurring,Scurring,scurring
+Other,shivering,Shivering,shivering
+Other,silver_like_dusting,Silver Like Dusting,silver like dusting
+Other,spinning_movements,Spinning Movements,spinning movements
+Other,spotting_urination,Spotting Urination,spotting urination
+Other,sunken_eyes,Sunken Eyes,sunken eyes
+Other,swollen_blood_vessels,Swollen Blood Vessels,swollen blood vessels
+Other,swollen_extremeties,Swollen Extremeties,swollen extremeties
+Other,swollen_legs,Swollen Legs,swollen legs
+Other,toxic_look_(typhos),Toxic Look Typhos,toxic look (typhos)
+Other,ulcers_on_tongue,Ulcers On Tongue,ulcers on tongue
+Other,unsteadiness,Unsteadiness,unsteadiness
+Other,visual_disturbances,Visual Disturbances,visual disturbances
+Other,watering_from_eyes,Watering From Eyes,watering from eyes
+Other,yellow_crust_ooze,Yellow Crust Ooze,yellow crust ooze
+Other,yellowing_of_eyes,Yellowing Of Eyes,yellowing of eyes
+Respiratory,blood_in_sputum,Blood In Sputum,blood in sputum
+Respiratory,breathlessness,Breathlessness,"breathlessness, difficulty_breathing, shortness_of_breath"
+Respiratory,chest_pain,Chest Pain,"chest pain, chest_tightness"
+Respiratory,cough,Cough,cough
+Respiratory,mucoid_sputum,Mucoid Sputum,mucoid sputum
+Respiratory,patches_in_throat,Patches In Throat,patches in throat
+Respiratory,phlegm,Phlegm,phlegm
+Respiratory,red_sore_around_nose,Red Sore Around Nose,red sore around nose
+Respiratory,runny_nose,Runny Nose,"nasal_discharge, runny nose"
+Respiratory,rusty_sputum,Rusty Sputum,rusty sputum
+Respiratory,sinus_pressure,Sinus Pressure,sinus pressure
+Respiratory,throat_irritation,Throat Irritation,throat irritation
+Skin & Hair,blister,Blister,blister
+Skin & Hair,brittle_nails,Brittle Nails,brittle nails
+Skin & Hair,inflammatory_nails,Inflammatory Nails,inflammatory nails
+Skin & Hair,internal_itching,Internal Itching,internal itching
+Skin & Hair,itching,Itching,itching
+Skin & Hair,nodal_skin_eruptions,Nodal Skin Eruptions,nodal skin eruptions
+Skin & Hair,pus_filled_pimples,Pus Filled Pimples,pus filled pimples
+Skin & Hair,red_spots_over_body,Red Spots Over Body,red spots over body
+Skin & Hair,skin_peeling,Skin Peeling,skin peeling
+Skin & Hair,skin_rash,Skin Rash,skin rash
+Skin & Hair,small_dents_in_nails,Small Dents In Nails,small dents in nails
+Skin & Hair,yellowish_skin,Yellowish Skin,yellowish skin
+Urinary,bladder_discomfort,Bladder Discomfort,bladder discomfort
+Urinary,burning_micturition,Burning Micturition,"burning micturition, dysuria, painful_urination"
+Urinary,continuous_feel_of_urine,Continuous Feel Of Urine,continuous feel of urine
+Urinary,dark_urine,Dark Urine,dark urine
+Urinary,foul_smell_of_urine,Foul Smell Of Urine,foul smell of urine
+Urinary,polyuria,Polyuria,polyuria
+Urinary,yellow_urine,Yellow Urine,yellow urine
